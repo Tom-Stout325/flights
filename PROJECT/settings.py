@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'environ',
     'bootstrap5',
     'fontawesomefree',
+    'dj_database_url',
 ]
 
 MIDDLEWARE = [

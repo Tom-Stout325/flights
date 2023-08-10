@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get(
     default=secrets.token_urlsafe(nbytes=64),
 )
 
-ALLOWED_HOSTS = ['https://flightplans-57ff929e448d.herokuapp.com/', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['https://flightplans-57ff929e448d.herokuapp.com', '127.0.0.1', 'localhost']
 
 DEBUG = False
 

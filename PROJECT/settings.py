@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 import environ
 import secrets
-
+import dj_database_url
 
 env = environ.Env()
 
@@ -68,7 +68,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'PROJECT.wsgi.application'
 
-
+DATABASES = {
+    'default': dj_database_url.parse(
+        'postgres://cnmmogypukavgw:051f1e747e47a49cff626a8d696ef86396801262c1630923bdba8f4f0d3efee3@ec2-3-234-204-26.compute-1.amazonaws.com:5432/d5hcv9b2mqjv29',
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
+}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': env('DB_ENGINE'),

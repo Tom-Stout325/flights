@@ -1,0 +1,57 @@
+{% extends 'index.html' %} 
+{% load static %} 
+
+{% block content %}
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div style="max-width: 40%; margin: auto">
+        <img
+          style="max-width: 100%"
+          src="{% static 'images/FlightPlanLogo_900px.png' %}"/>
+      </div>
+      <div>
+        <h1
+          style="
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: maroon;">
+          Drones
+        </h1>
+        <hr />
+      </div>
+      <div class="table-responsive">
+        <table
+          class="table table-striped table-hover"
+          style="font-family: 'Montserrat', sans-serif">
+          <tr style="text-align: center; font-weight: 600">
+            <td style="color: maroon">Drone ID</td>
+            <td style="color: maroon">Drone</td>
+            <td style="color: maroon">Serial Number</td>
+            <td style="color: maroon;">Drone Details</td>
+          </tr>
+          {% for x in drones %}
+          <tr style="color: maroon; align-items: center;">
+            <td style="text-align: center; font-size: large;">{{ x.id }}</td>
+            <td style="text-align: center; font-size: large;">{{ x.brand }} {{ x.model }}</td>
+            <td style="text-align: center; font-size: large;">{{ x.serial }}</td>
+            <td style="padding-left: 4rem;">
+              <a href="{% url 'droneFlights' x.id %}">
+                <button
+                  style="color: maroon;"
+                  type="button"
+                  class="btn btn-outline-danger">
+                  View
+                </button></a>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+{% endblock %}

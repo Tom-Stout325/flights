@@ -1,0 +1,62 @@
+INSERT INTO flightplan_drones (model, serial, registration, reg_exp) 
+VALUES 
+(1, 'DJI Inspire 2 Blue', '0A0BJ771090CRN', 'FA968A6KPO06Y5', '2025-02-24'),
+(2, 'DJI Inspire 2 Gold', 'OA59ASDPL87SAF62HH', 'FAPXANY4YEFCGTW58', '2025-02-24'),
+(3, 'DJI MAVIC 3 BLUE', '1581F45TB21CG1A1689', NULL, NULL),
+(4, 'DJI MAVIC 3 GOLD', '1581FASSB21CG1A049Y', 'FH9D63A3NHNH', '2025-11-08'),
+(5, 'DJI Mini 2', '3Q4CFAR65983Q5LN', NULL, NULL);
+
+
+
+
+
+INSERT INTO flightplan_flights (date, flight_time, event, location, auth_req, address, city, state, notes, drone, username_id)  
+VALUES
+  ('2022-02-25', 120, 'NHRA Arizona Nationals', 'Wild Horse Pass Motorsports Park', false, '20000 S. Maricopa Rd.', 'Chandler', 'AZ', 'NHRA Race, Saturday qualifications', 1, 1),
+  ('2022-02-26', 240, 'NHRA Arizona Nationals', 'Wild Horse Pass Motorsports Park', false, '20000 S. Maricopa Rd.', 'Chandler', 'AZ', 'NHRA Race, Sunday finals', 1, 1),
+  ('2022-02-27', 180, 'NHRA Arizona Nationals', 'Wild Horse Pass Motorsports Park', false, '20000 S. Maricopa Rd.', 'Gainesville', 'FL', 'NHRA Race, Friday qualifications', 1, 1),
+  ('2022-03-10', 120, 'NHRA Gatornationals', 'Gainesville Raceway', true, '11211 N. County Road 225', 'Gainesville', 'FL', 'NHRA Race, Saturday qualifications', 1, 1),
+  ('2022-03-11', 240, 'NHRA Gatornationals', 'Gainesville Raceway', true, '11211 N. County Road 225', 'Gainesville', 'FL', 'NHRA Race, Sunday finals', 1, 1),
+  ('2022-04-24', 180, 'NHRA SpringNationals', 'Houston Raceway Park', false, '2525 South FM 565', 'Concord', 'NC', 'NHRA Race, Friday qualifications, began live streaming video', 1, 3),
+  ('2022-04-29', 120, 'Four-Wide Nationals', 'zMax Dragway', false, '6570 Bruton Smith Blvd', 'Concord', 'NC', 'NHRA Race, Saturday qualifications', 1, 3),
+  ('2022-04-30', 240, 'Four-Wide Nationals', 'zMax Dragway', false, '6570 Bruton Smith Blvd', 'Concord', 'NC', 'NHRA Race, Sunday finals', 1, 3),
+  ('2022-05-01', 180, 'Four-Wide Nationals', 'zMax Dragway', false, '6570 Bruton Smith Blvd', 'Dinwiddie', 'VA', 'NHRA Race, Friday qualifications', 1, 3),
+  ('2022-05-13', 120, 'Virginia Nationals', 'Virginia Motorsports Park', false, '8018 Boydton Plank Rd', 'Dinwiddie', 'VA', 'NHRA Race, Saturday qualifications', 1, 3),
+  ('2022-05-14', 240, 'Virginia Nationals', 'Virginia Motorsports Park', false, '8018 Boydton Plank Rd', 'Dinwiddie', 'VA', 'NHRA Race, Sunday finals', 1, 3),
+  ('2022-05-15', 180, 'Virginia Nationals', 'Virginia Motorsports Park', false, '8018 Boydton Plank Rd', 'Epping', 'NH', 'NHRA Race, Friday qualifications', 1, 3),
+  ('2022-06-03', 120, 'New England Nationals', 'New England Dragway', false, '280 Exeter Rd', 'Epping', 'NH', 'NHRA Race, Saturday qualifications', 1, 3),
+  ('2022-07-23', 240, 'Sonoma Nationals', 'Sonoma Raceway', false, '29355 Anrold Dr', 'Sonoma', 'CA', 'NHRA Race, Sunday finals', 1, 4),
+  ('2022-07-24', 180, 'Sonoma Nationals', 'Sonoma Raceway', false, '29355 Anrold Dr', 'Kent', 'WA', 'NHRA Race, Friday qualifications', 1, 4),
+  ('2022-07-29', 120, 'Northwest Nationals', 'Pacific Raceways', false, '31001 144th Ave SE', 'Kent', 'WA', 'NHRA Race, Saturday qualifications', 1, 4),
+  ('2022-07-30', 240, 'Northwest Nationals', 'Pacific Raceways', false, '31001 144th Ave SE', 'Kent', 'WA', 'NHRA Race, Sunday finals', 1, 4),
+  ('2022-07-31', 180, 'Northwest Nationals', 'Pacific Raceways', false, '31001 144th Ave SE', 'Indianapolis', 'IN', 'NHRA Race, Friday qualifications', 1, 4),
+  ('2022-09-03', 120, 'US Nationals', 'Indianapolis Raceway Park', false, '10267 US 136', 'Indianapolis', 'IN', 'NHRA Race, Saturday qualifications', 1, 4),
+  ('2022-09-04', 240, 'US Nationals', 'Indianapolis Raceway Park', false, '10267 US 136', 'Indianapolis', 'IN', 'NHRA Race, Sunday finals', 1, 4),
+  ('2022-09-05', 180, 'US Nationals', 'Indianapolis Raceway Park', false, '10267 US 136', 'Mohnton', 'PA', 'NHRA Race, Friday qualifications', 1, 4),
+  ('2022-09-19', 120, 'Pep Boys Nationals', 'Maple Grove Raceway', false, '30 Stauffer Park Lane', 'Mohnton', 'PA', 'NHRA Race, Saturday qualifications', 1, 4),
+  ('2022-09-20', 240, 'Pep Boys Nationals', 'Maple Grove Raceway', false, '30 Stauffer Park Lane', 'Mohnton', 'PA', 'NHRA Race, Sunday finals', 1, 4),
+  ('2022-03-12', 180, 'NHRA Gatornationals', 'Gainesville Raceway', true, '11211 N. County Road 225', 'Baytown', 'TX', 'NHRA Race, Friday qualifications', 1, 1),
+  ('2022-04-22', 120, 'NHRA SpringNationals', 'Houston Raceway Park', false, '2525 South FM 565', 'Baytown', 'TX', 'NHRA Race, Saturday qualifications', 1, 1),
+  ('2022-04-23', 240, 'NHRA SpringNationals', 'Houston Raceway Park', false, '2525 South FM 565', 'Baytown', 'TX', 'NHRA Race, Sunday finals', 1, 1),
+  ('2022-06-04', 240, 'New England Nationals', 'New England Dragway', false, '280 Exeter Rd', 'Epping', 'NH', 'NHRA Race, Sunday finals', 1, 3),
+  ('2022-06-05', 180, 'New England Nationals', 'New England Dragway', false, '280 Exeter Rd', 'Bristol', 'TN', 'NHRA Race, Friday qualifications', 1, 3),
+  ('2022-06-17', 120, 'Thunder Valley Nationals', 'Bristol Dragway', false, '151 Speedway Blvd', 'Bristol', 'TN', 'NHRA Race, Saturday qualifications', 1, 3),
+  ('2022-06-18', 240, 'Thunder Valley Nationals', 'Bristol Dragway', false, '151 Speedway Blvd', 'Bristol', 'TN', 'NHRA Race, Sunday finals', 1, 3),
+  ('2022-06-19', 180, 'Thunder Valley Nationals', 'Bristol Dragway', false, '151 Speedway Blvd', 'Morrison', 'CO', 'NHRA Race, Friday qualifications', 1, 3),
+  ('2022-07-15', 120, 'Mile-High nationals', 'Bandimere Speedway', false, '3051 S. Rooney Rd', 'Morrison', 'CO', 'NHRA Race, Saturday qualifications', 1, 3),
+  ('2022-07-16', 240, 'Mile-High nationals', 'Bandimere Speedway', false, '3052 S. Rooney Rd', 'Morrison', 'CO', 'NHRA Race, Sunday finals', 1, 3),
+  ('2022-07-17', 180, 'Mile-High nationals', 'Bandimere Speedway', false, '3053 S. Rooney Rd', 'Sonoma', 'CA', 'NHRA Race, Friday qualifications', 1, 3),
+  ('2022-07-22', 120, 'Sonoma Nationals', 'Sonoma Raceway', false, '29355 Anrold Dr', 'Sonoma', 'CA', 'NHRA Race, Saturday qualifications, Crashed Mavic 3', 1, 3),
+  ('2022-09-21', 180, 'Pep Boys Nationals', 'Maple Grove Raceway', false, '30 Stauffer Park Lane', 'Concord', 'NC', 'NHRA Race, Friday qualifications', 1, 4),
+  ('2022-09-23', 120, 'Carolina Nationals', 'zMax Dragway', false, '6570 Bruton Smith Blvd', 'Concord', 'NC', 'NHRA Race, Saturday qualifications', 1, 4),
+  ('2022-09-24', 240, 'Carolina Nationals', 'zMax Dragway', false, '6570 Bruton Smith Blvd', 'Concord', 'NC', 'NHRA Race, Sunday finals', 1, 4),
+  ('2022-09-25', 180, 'Carolina Nationals', 'zMax Dragway', false, '6570 Bruton Smith Blvd', 'Madison', 'IL', 'NHRA Race, Friday qualifications', 1, 4),
+  ('2022-09-30', 120, 'Midwest Nationals', 'Technology Raceway', false, '700 Raceway Blvd', 'Madison', 'IL', 'NHRA Race, Saturday qualifications', 1, 4),
+  ('2022-10-01', 240, 'Midwest Nationals', 'Technology Raceway', false, '700 Raceway Blvd', 'Madison', 'IL', 'NHRA Race, Sunday finals', 1, 4),
+  ('2022-10-02', 180, 'Midwest Nationals', 'Technology Raceway', false, '700 Raceway Blvd', 'Ennis ', 'TX', 'NHRA Race, Friday qualifications', 1, 4),
+  ('2022-10-14', 120, 'Texas FallNationals', 'Texas Motorplex', false, '7500 US 287', 'Ennis ', 'TX', 'NHRA Race, Saturday qualifications', 1, 4),
+  ('2022-10-15', 240, 'Texas FallNationals', 'Texas Motorplex', false, '7500 US 287', 'Ennis ', 'TX', 'NHRA Race, Sunday finals', 1, 4),
+  ('2022-10-16', 180, 'Texas FallNationals', 'Texas Motorplex', false, '7500 US 287', 'Pomona', 'CA', 'NHRA Race, Friday qualifications', 1, 4),
+  ('2022-11-11', 120, 'NHRA Finals', 'Pomona Dragstrip', true, '2780 Fairplex Dr', 'Pomona', 'CA', 'NHRA Race, Saturday qualifications', 1, 4),
+  ('2022-11-12', 240, 'NHRA Finals', 'Pomona Dragstrip', true, '2780 Fairplex Dr', 'Pomona', 'CA', 'NHRA Race, Sunday finals', 1, 4),
+  ('2022-11-13', 180, 'NHRA Finals', 'Pomona Dragstrip', true, '2780 Fairplex Dr', 'Pomona', 'CA', 'NHRA Race, Sunday finals', 1, 4);

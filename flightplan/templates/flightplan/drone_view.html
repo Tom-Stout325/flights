@@ -1,0 +1,88 @@
+{% extends 'index.html' %} 
+{% load static %} 
+  {% block title %} 
+    DroneView View 
+  {% endblock %} 
+{% block content %}
+
+
+<body>
+  <div class="container">
+    <br/>
+    <div class="row">
+      <div class="col-md-6">
+        <img
+          style="max-width: 100%"
+          src="{% static 'images/FlightPlanLogo.png' %}"/>
+        </div>
+        <div 
+          class="col-md-6"
+          style="
+            font-family: 'Montserrat', sans-serif;
+            color: maroon;
+            text-align: center;
+            border-left: 1px solid maroon;">
+          <br/>
+          <h2 style="font-weight: 300">Drone #: {{ drone_data.id }}</h2>
+          <br/>
+          <h1 style="font-weight: 400">{{ drone_data.brand }} {{ drone_data.model }}</h1>
+          <br/>
+          <h3 style="font-weight: 400">
+            Number of Flights:&nbsp {{ flight_num.total }}
+          </h3>
+          <br/>
+          <h3 style="font-weight: 400">
+            Total Flight Time: &nbsp{{ flight_total.total|floatformat:2 }} &nbspHours
+          </h3>           
+      <div>
+        <br/>
+      <div class="row">
+        <div class="col-md-6">
+          <h5 style="font-weight: 300">Serial Number</h5>
+          <h5 style="font-weight: 400">{{ drone_data.serial }}</h5>
+        </div>
+        <div class="col-md-6">
+          <h5 style="font-weight: 300">FAA Registration:</h5>
+          <h5 style="font-weight: 400">{{ drone_data.registration }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="container">
+        <div class="row mt-5">
+          <br />
+          <table
+          class="table table-striped table-hover"
+          style="font-family: 'Montserrat', sans-serif">
+          <tr style="text-align: center; font-weight: 600">
+            <td style="color: maroon;">Flight #</td>
+            <td style="color: maroon">DATE</td>
+            <td style="color: maroon">DRONE</td>
+            <td style="color: maroon">EVENT</td>
+            <td style="color: maroon">CITY</td>
+            <td style="color: maroon">FLIGHT TIME</td>
+          </tr>
+          {% for flights in flight_data %}
+          <tr style="color: maroon">
+            <td style="width: 5rem; text-align: center">{{ flights.id }}</td>
+            <td style="width: 10rem; padding-left: 2rem">{{ flights.date }}</td>
+            <td style="width: 9rem; padding-left: 2rem">{{ flights.drone }}</td>
+            <td style="width: 12rem">{{ flights.event }}</td>
+            <td style="width: 8rem">{{ flights.city }}</td>
+            <td style="width: 5rem; text-align: center">
+              {{ flights.flight_time }}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+    <a href="{% url 'drones' %}" class="btn btn-outline-danger my-3">Go Back</a>
+  </div>
+</body>
+
+{% if next %}
+  <p>Must be logged in!</p>
+{% endif %} 
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+    <h1>Add a New Drone</h1>
+
+    <div style = 'margin-top: 30px;'>
+        <form action='.' method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button style='margin-top: 10px;' type='submit' > Add Drone</button>
+        </form>
+    <div>
+
+
+{% endblock %}

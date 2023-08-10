@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}
+    Login Page
+{% endblock %}
+
+{% block content %}
+
+    <body>
+        <div class="shadow p-5 mb-5 bg-body rounded"
+            style = "max-width: 70%; margin: auto; margin-top: 5vh;">
+            <div 
+                class="container">
+                    <h1 
+                    style = 
+                    "font-family: 'Montserrat', sans-serif; 
+                    color:maroon; 
+                    text-align: center; 
+                    padding-bottom: 5vh;">Please Login
+                    </h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img 
+                                style="msrc="{% static 'images/FlightPlanLogo.png' %}">
+                        </div>
+                    <div class="col-md-5"
+                        style = "border-left: 1px solid maroon">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <br />
+                            <div class="d-grid gap-2">
+                                <button 
+                                    type="submit"
+                                    class="btn btn-outline-danger">
+                                    Login
+                                </button>
+                            </div>
+                            <hr />
+                            <div>
+                                <p style="
+                                    font-family: 'Montserrat', sans-serif; 
+                                    font-size: 12px;
+                                    color:maroon; 
+                                    text-align: center;">
+                                    Don't have an account? Contact Tom Stout tom@tom-stout.com
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    {% if next %}
+        <p>Must be logged in!</p>
+    {% endif %}
+{% endblock %}

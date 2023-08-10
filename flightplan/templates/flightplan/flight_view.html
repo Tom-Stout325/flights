@@ -1,0 +1,67 @@
+{% extends 'index.html' %} 
+{% load static %} 
+{% block title %} 
+  Flight View 
+{% endblock %} 
+
+{% block content %}
+
+  <body>
+    <div
+      class="shadow p-5 mb-5 bg-body rounded"
+      style="max-width: 80%; margin: auto; margin-top: 5vh">
+      <div class="container">
+        <h1
+          style="
+            font-family: 'Montserrat', sans-serif;
+            color: maroon;
+            text-align: center;
+            padding-bottom: 5vh;">
+          Flight # {{ flight.id }}
+        </h1>
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              style="max-width: 100%"
+              src="{% static 'images/FlightPlanLogo.png' %}"/>
+          </div>
+              <div class="col-md-3" 
+                  style=
+                    "border-left: 1px solid maroon;
+                    font-family: 'Montserrat', sans-serif;
+                    color: maroon;">
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;">DATE:</h3></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;">DRONE:</h3></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;">EVENT:</h3></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;">LOCATION:</h3></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;">CITY:</h3></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;">FLIGHT TIME:</h3></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;">NOTES:</h3></div>
+                </div>
+              <div class="col-md-5"
+                style="
+                    font-family: 'Montserrat', sans-serif;
+                    color: maroon;">
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;">  {{ flight.date }}</h4></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;">  {{ flight.drone }}</h4></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;"> {{ flight.event }}</h4></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;"> {{ flight.location }}</h4></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;"> {{ flight.city }}</h4></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;"> {{ flight.flight_time }}</h4></div>
+                  <div><h3 style="font-weight: 300; font-size: 1.1rem; height: 25px;"> {{ flight.notes }}</h4></div>
+              </div>
+              <div class="d-grid gap-2">
+                <br />
+                <a href="{% url 'flights' %}" class="btn btn-outline-danger">Go Back To Flights</a>
+              </div>
+          </div>                
+        </div>
+      </div>
+    </div>
+  </body>
+
+    {% if next %}
+    <p>Must be logged in!</p>
+    {% endif %} 
+
+{% endblock %}

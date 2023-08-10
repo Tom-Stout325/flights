@@ -1,0 +1,33 @@
+{% load static %}
+
+<header>
+  <nav class="navbar navbar-expand-lg"
+    style="background-color:lightblue">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}" style="color: maroon">
+        <img style = "margin-left: 5rem; margin-right: 3rem;"
+          src="{% static 'images/prop_500.png' %}"
+          alt="FlightPlan Logo"
+          class="App-logo"/>
+          FlightPlan</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a style="color: maroon"class="nav-link active" href="{% url 'home' %}">HOME</a></li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item"><a class="nav-link active" style="color: maroon" href="{% url 'profile' %}">PROFILE</a></li>
+          <li class="nav-item"><a style="color: maroon" class="nav-link active" href="{% url 'flights' %}">FLIGHTS</a></li>
+          <li class="nav-item"><a class="nav-link active" style="color: maroon" href="{% url 'drones' %}">DRONES</a></li>
+          <li class="nav-item"><a class="nav-link active" style="color: maroon" href="{% url 'logout' %}">LOGOUT</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
